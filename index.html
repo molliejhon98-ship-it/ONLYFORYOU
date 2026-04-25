@@ -156,7 +156,6 @@ button:hover{
 <audio id="music" src="music.mp3"></audio>
 
 <script>
-
 window.onload = () => {
   alert("Hey... I have something for you 👀");
 };
@@ -187,35 +186,50 @@ function thief(){
 }
 
 function showMessage(){
-  document.getElementById("music").play();
+  const music = document.getElementById("music");
 
-  content.style.display="none";
+  /* 🎵 Start at 10 seconds */
+  music.currentTime = 10;
+  music.play();
 
-  const heart=document.createElement("div");
-  heart.className="heart";
+  content.style.display = "none";
+
+  const heart = document.createElement("div");
+  heart.className = "heart";
   document.body.appendChild(heart);
 
-  const msg=document.createElement("div");
-  msg.className="message";
-  msg.innerHTML=`
+  const msg = document.createElement("div");
+  msg.className = "message";
+  msg.innerHTML = `
     <h2>💌 For You</h2>
     <p>
       PLEASE READ<br><br>
       
-      I don’t know if anyone’s told you this lately, but you carry a kind of strength that doesn’t always make noise, it shows in the way you keep going, even when things get heavy. You’ve been through more than most people see, and still, you stand with a quiet resilience that’s honestly beautiful. You are loved in ways you might not always notice, admired more than you realize, and deeply adored for who you are, not just for what you do. And I believe in you hmm completely, without hesitation.
+      I don’t know if anyone’s told you this lately, but you carry a kind of strength that doesn’t always make noise, it shows in the way you keep going, even when things get heavy. You’ve been through more than most people see, and still, you stand with a quiet resilience that’s honestly beautiful. You are loved in ways you might not always notice, admired more than you realize, and deeply adored for who you are, not just for what you do. And I believe in you completely, without hesitation.
 
-Please don’t let other people’s opinions shrink you. They don’t get to define your worth, you already are something rare and incredible just as you are. I know I might just be a stranger, and maybe my words won’t mean much to you, but there’s something about you that stands ouT hmm you glow differently. Not louder, not brighter in an obvious way, but in a way that lingers, that stays with people.
+      <br><br>
 
-I hope you remember your worth, even on the days it feels blurry. Don’t ever settle for less than what your heart knows you deserve. And even if one day I become just a passing memory you barely recall, I’ll still be here believing in everything you’re capable of. I’m genuinely excited for your future hehe for all the things you’ll become, achieve, and discover. You’re going to do amazing things, and you deserve every single one of them. ALWAYS REMEMBER THIS PHRASE 
+      Please don’t let other people’s opinions shrink you. They don’t get to define your worth—you already are something rare and incredible just as you are. I know I might just be a stranger, and maybe my words won’t mean much to you, but there’s something about you that stands out—you glow differently.
 
-"SI VIS AMARI, AMA."
+      <br><br>
 
- HAVE A GREAT DAY PO
+      I hope you remember your worth, even on the days it feels blurry. Don’t ever settle for less than what your heart knows you deserve. And even if one day I become just a passing memory, I’ll still be here believing in everything you’re capable of.
+
+      <br><br>
+
+      ALWAYS REMEMBER THIS PHRASE:
+
+      <br><br>
+
+      <strong>"SI VIS AMARI, AMA."</strong>
+
+      <br><br>
+
+      HAVE A GREAT DAY PO 💖
     </p>
   `;
   document.body.appendChild(msg);
 }
-
 </script>
 
 </body>
